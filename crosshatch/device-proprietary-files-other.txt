@@ -3,8 +3,8 @@ product/etc/firmware/music_detector.descriptor
 product/etc/firmware/music_detector.sound_model
 
 # Bluetooth
-product/lib64/libaptX_encoder.so
-product/lib64/libaptXHD_encoder.so
+system_ext/lib64/libaptX_encoder.so
+system_ext/lib64/libaptXHD_encoder.so
 
 # Hotword
 -product/priv-app/HotwordEnrollmentOKGoogleWCD9340/HotwordEnrollmentOKGoogleWCD9340.apk;PRESIGNED
@@ -12,8 +12,8 @@ product/lib64/libaptXHD_encoder.so
 
 # Radio
 product/etc/cne/andsfCne.xml
-product/lib/vendor.google.wifi_ext@1.0.so
-product/lib64/vendor.google.wifi_ext@1.0.so
+system_ext/lib/vendor.google.wifi_ext@1.0.so
+system_ext/lib64/vendor.google.wifi_ext@1.0.so
 -product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 -product/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk;PRESIGNED
 product/priv-app/EuiccSupportPixel/esim-full-v0.img
@@ -23,8 +23,6 @@ product/priv-app/EuiccSupportPixel/esim-v1.img
 -product/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk
 product/lib/libsecureuisvc_jni.so
 product/lib64/libsecureuisvc_jni.so
-product/lib/vendor.qti.hardware.qdutils_disp@1.0.so
-product/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Vendor partition
 -vendor/app/crosshatch_game_driver/crosshatch_game_driver.apk
@@ -50,17 +48,14 @@ vendor/bin/ftmdaemon
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/hvdcp_opti
-vendor/bin/hw/android.hardware.authsecret@1.0-service.citadel
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/bin/hw/android.hardware.confirmationui@1.0-service-crosshatch
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/bin/hw/android.hardware.confirmationui@1.0-service-google
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service.citadel
+vendor/bin/hw/android.hardware.keymaster@4.1-service.citadel
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.neuralnetworks@1.0-service-paintbox
-vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
-vendor/bin/hw/android.hardware.oemlock@1.0-service.citadel
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/bin/hw/android.hardware.weaver@1.0-service.citadel
 vendor/bin/hw/citadeld
 vendor/bin/hw/citadel_updater
@@ -68,7 +63,7 @@ vendor/bin/hw/init_citadel
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.google.radioext@1.0-service
 vendor/bin/hw/vendor.google.wifi_ext@1.0-service-vendor
-vendor/bin/hw/vendor.google.wireless_charger@1.1-service-vendor
+vendor/bin/hw/vendor.google.wireless_charger@1.2-service-vendor
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/imsdatadaemon
@@ -101,7 +96,6 @@ vendor/bin/qrtr-ns
 vendor/bin/qseecomd
 vendor/bin/qseecom_sample_client
 vendor/bin/qti
-vendor/bin/ramdump
 vendor/bin/ramoops
 vendor/bin/rmt_storage
 vendor/bin/sensors.qti
@@ -181,8 +175,6 @@ vendor/dsp/sdsp/libstabilitydomain_skel.so
 vendor/dsp/sdsp/libsysmondomain_skel.so
 vendor/dsp/sdsp/libsysmon_skel.so
 vendor/dsp/sdsp/lowi_client.so
-vendor/dsp/sdsp/sleep.napp_header
-vendor/dsp/sdsp/sleep.so
 vendor/dsp/sdsp/smartbatching.napp_header
 vendor/dsp/sdsp/smartbatching.so
 vendor/etc/camera/camera_imu_average_calibration.xml
@@ -212,27 +204,24 @@ vendor/etc/default_b1.mps
 vendor/etc/default_c1.mps
 vendor/etc/flp.conf
 vendor/etc/FOSSConfig.xml
-vendor/etc/init/android.hardware.authsecret@1.0-service.citadel.rc
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.fpc.rc
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.2-service.fpc.rc
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/etc/init/android.hardware.confirmationui@1.0-service-crosshatch.rc
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
+vendor/etc/init/android.hardware.confirmationui@1.0-service-google.rc
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/etc/init/android.hardware.keymaster@4.0-service.citadel.rc
+vendor/etc/init/android.hardware.keymaster@4.1-service.citadel.rc
 vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
-vendor/etc/init/android.hardware.oemlock@1.0-service.citadel.rc
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 vendor/etc/init/android.hardware.weaver@1.0-service.citadel.rc
 vendor/etc/init/citadeld.rc
 vendor/etc/init/easelmanagerd.rc
 vendor/etc/init/init_citadel.rc
-vendor/etc/init/init-ramdump.rc
 vendor/etc/init/init-ramoops.rc
 vendor/etc/init/PaintboxDriver.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/vendor.google.radioext@1.0-service.rc
 vendor/etc/init/vendor.google.wifi_ext@1.0-service.rc
-vendor/etc/init/vendor.google.wireless_charger@1.1-service.rc
+vendor/etc/init/vendor.google.wireless_charger@1.2-service.rc
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/izat.conf
@@ -259,8 +248,6 @@ vendor/etc/sensors/registry/b1c1_max11261_0.json
 vendor/etc/sensors/registry/b1c1_max11261_no_pullup.json
 vendor/etc/sensors/registry/b1c1_max11261_rev1_0.json
 vendor/etc/sensors/registry/b1c1_unused_gpio.json
-vendor/etc/sensors/registry/bmi160_0.json
-vendor/etc/sensors/registry/bmp380_0.json
 vendor/etc/sensors/registry/c1_bmi160_0.json
 vendor/etc/sensors/registry/c1_lis2mdl_0.json
 vendor/etc/sensors/registry/c1_lis2mdl_0_proto.json
@@ -269,6 +256,8 @@ vendor/etc/sensors/registry/c1_sx932x_0.json
 vendor/etc/sensors/registry/c1_sx932x_0_no_pullup.json
 vendor/etc/sensors/registry/c1_tmd2725_0.json
 vendor/etc/sensors/registry/c1_touch_gesture_0.json
+vendor/etc/sensors/registry/bmi160_0.json
+vendor/etc/sensors/registry/bmp380_0.json
 vendor/etc/sensors/registry/lis2mdl_0.json
 vendor/etc/sensors/registry/sns_basic_gestures.json
 vendor/etc/sensors/registry/sns_cm.json
@@ -287,7 +276,7 @@ vendor/etc/sensors/registry/sx932x_0.json
 vendor/etc/sensors/registry/tmd2725_0.json
 vendor/etc/sensors/sensor_def_qcomdev.conf
 vendor/etc/sensors/sns_reg_config
-vendor/etc/vintf/manifest/manifest_wifi_ext.xml
+-vendor/etc/vintf/manifest/manifest_wifi_ext.xml
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
@@ -335,7 +324,6 @@ vendor/firmware/cdsp.b11
 vendor/firmware/cdsp.mdt
 vendor/firmware/cdspr.jsn
 vendor/firmware/citadel/ec.bin
-vendor/firmware/citadel/FIH-RC1-dev-fusing.ec.bin
 vendor/firmware/cmnlib64.b00
 vendor/firmware/cmnlib64.b01
 vendor/firmware/cmnlib64.b02
@@ -360,12 +348,6 @@ vendor/firmware/confirmationui.b04
 vendor/firmware/confirmationui.b05
 vendor/firmware/confirmationui.b06
 vendor/firmware/confirmationui.b07
-vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_77.bin
-vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_49.bin
-vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_70.bin
-vendor/firmware/confirmationui_fonts/LeapFrog_Roboto_49.bin
-vendor/firmware/confirmationui_fonts/LeapFrog_Roboto_56.bin
-vendor/firmware/confirmationui_fonts/LeapFrog_Roboto_70.bin
 vendor/firmware/confirmationui.mdt
 vendor/firmware/cpe_9340.b01
 vendor/firmware/cpe_9340.b03
@@ -415,9 +397,6 @@ vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.mdt
-vendor/firmware/leia_pfp_470.fw
-vendor/firmware/leia_pm4_470.fw
-vendor/firmware/manifest.xml
 vendor/firmware/modemuw.jsn
 vendor/firmware/nanoapp_config.textproto
 vendor/firmware/pn557.bin
@@ -470,7 +449,7 @@ vendor/firmware/wil6210_sparrow_plus_ftm.fw
 vendor/firmware/wlanmdsp.mbn
 -vendor/framework/com.google.android.camera.experimental2018.jar
 vendor/lib64/android.hardware.authsecret@1.0-impl.nos.so
-vendor/lib64/android.hardware.keymaster@4.0-impl.nos.so
+vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so
 vendor/lib64/android.hardware.oemlock@1.0-impl.nos.so
 vendor/lib64/android.hardware.weaver@1.0-impl.nos.so
 vendor/lib64/btaudio_offload_if.so
@@ -528,7 +507,6 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
 vendor/lib64/com.quicinc.cne.api@1.0.so
@@ -547,13 +525,11 @@ vendor/lib64/egl/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/android.hardware.bluetooth.a2dp@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/camera.sdm845.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/hw/sound_trigger.primary.sdm845.so
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib64/hw/vulkan.sdm845.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -570,8 +546,6 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbccQTI.so
 vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbthost_if.so
-vendor/lib64/libbthost_if_qti.so
 -vendor/lib64/libbtnv.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libc2d30_bltlib.so
@@ -605,8 +579,6 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libeaselmanager_client.so
 vendor/lib64/libeaselsystem.blue.so
 vendor/lib64/libelmyra-protos.so
-vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
 vendor/lib64/libFlacSwDec.so
 vendor/lib64/libflp.so
 vendor/lib64/libgcam_ae.so
@@ -622,9 +594,6 @@ vendor/lib64/libgoog_catpipe.so
 vendor/lib64/libgoog_flicker.so
 vendor/lib64/libgoog_llv_gpu.so
 vendor/lib64/libgoog_pdaf_core_imx363.so
-vendor/lib64/libgoogle_camera_hal_tests.so
-vendor/lib64/libgooglecamerahal.so
-vendor/lib64/libgooglecamerahalutils.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -771,9 +740,9 @@ vendor/lib64/vendor.google.radioext@1.1.so
 vendor/lib64/vendor.google.wifi_ext@1.0.so
 vendor/lib64/vendor.google.wireless_charger@1.0.so
 vendor/lib64/vendor.google.wireless_charger@1.1.so
+vendor/lib64/vendor.google.wireless_charger@1.2.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.googleext.imsext@1.0.so
-vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
@@ -799,7 +768,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so
@@ -825,11 +793,9 @@ vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/android.hardware.bluetooth.a2dp@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/sound_trigger.primary.sdm845.so
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib/hw/vulkan.sdm845.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -847,8 +813,6 @@ vendor/lib/libaudcal.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libbase64.so
 vendor/lib/libbccQTI.so
-vendor/lib/libbthost_if.so
-vendor/lib/libbthost_if_qti.so
 -vendor/lib/libbtnv.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
@@ -889,9 +853,6 @@ vendor/lib/libgcs.so
 vendor/lib/libgeofence.so
 vendor/lib/libgnsspps.so
 vendor/lib/libgoog_llv_gpu.so
-vendor/lib/libgooglecamerahal.so
-vendor/lib/libgoogle_camera_hal_tests.so
-vendor/lib/libgooglecamerahalutils.so
 vendor/lib/libGPQTEEC_vendor.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
@@ -1018,7 +979,6 @@ vendor/lib/libvsc.so
 vendor/lib/libwms.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
-vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
 vendor/lib/qcrild_librilutils.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
@@ -1040,7 +1000,6 @@ vendor/lib/vendor.google_paintbox@1.0.so
 vendor/lib/vendor.google.radioext@1.0.so
 vendor/lib/vendor.google.radioext@1.1.so
 vendor/lib/vendor.qti.esepowermanager@1.0.so
-vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
 vendor/lib/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
@@ -1063,7 +1022,6 @@ vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib/vendor.qti.hardware.soter@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib/vendor.qti.ims.callinfo@1.0.so
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so
@@ -1206,7 +1164,6 @@ vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/ATT/FirstNet/mcfg_sw.
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/ATT/Non_VoLTE/mcfg_sw.mbn
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/ATT/VoLTE/mcfg_sw.mbn
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/Bell/Commercial/CA/mcfg_sw.mbn
-vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/CSpire/IMSless/mcfg_sw.mbn
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/Inland/Commercial/mcfg_sw.mbn
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/Rogers/Commercial/CA/mcfg_sw.mbn
 vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/NA/Sprint/Commercial/mcfg_sw.mbn
