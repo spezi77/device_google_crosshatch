@@ -39,6 +39,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOARD_COMMON_PATH := device/google/crosshatch/sdm845
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
@@ -57,12 +58,6 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-# vendor.img
-ifneq ($(PRODUCT_USE_DYNAMIC_PARTITIONS), true)
-BOARD_VENDORIMAGE_PARTITION_SIZE := 805306368
-endif
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-
 # DTBO partition definitions
 BOARD_PREBUILT_DTBOIMAGE := device/google/crosshatch-kernel/dtbo.img
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
@@ -78,6 +73,7 @@ AB_OTA_PARTITIONS += \
     boot \
     system \
     vbmeta \
+    vendor \
     dtbo
 
 # Skip product and system_ext partition for nodap build
@@ -137,6 +133,10 @@ else
 endif
 endif
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
+
+# vendor.img
+BOARD_VENDORIMAGE_PARTITION_SIZE := 805306368
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # userdata.img
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 10737418240
