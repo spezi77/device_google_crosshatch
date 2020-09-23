@@ -276,7 +276,7 @@ vendor/etc/sensors/registry/sx932x_0.json
 vendor/etc/sensors/registry/tmd2725_0.json
 vendor/etc/sensors/sensor_def_qcomdev.conf
 vendor/etc/sensors/sns_reg_config
-vendor/etc/vintf/manifest/manifest_wifi_ext.xml
+-vendor/etc/vintf/manifest/manifest_wifi_ext.xml
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
