@@ -62,5 +62,3 @@ PRODUCT_BRAND := Google
 PRODUCT_NAME := hentai_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_MODEL := Pixel 3 XL
-
-$(call inherit-product-if-exists, vendor/google/crosshatch/crosshatch-vendor.mk)
