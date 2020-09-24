@@ -72,6 +72,7 @@ AB_OTA_PARTITIONS += \
     boot \
     system \
     vbmeta \
+    vendor \
     dtbo
 
 # Skip product and system_ext partition for nodap build
